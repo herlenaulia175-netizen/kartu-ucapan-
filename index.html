@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Ucapan Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kartu Ucapan Digital</h1>
+        <p>Buat kartu ucapan untuk orang tersayang</p>
+    </header>
+
+    <main class="container">
+        <!-- HALAMAN PERTAMA: FORM -->
+        <section class="form" id="halamanForm">
+            <h2>Buat Ucapan</h2>
+
+            <label for="jenis">Jenis Ucapan</label>
+            <select id="jenis">
+                <option>Selamat Ulang Tahun</option>
+                <option>Selamat Wisuda</option>
+                <option>Selamat Hari Guru</option>
+                <option>Terima Kasih</option>
+            </select>
+
+            <label for="nama">Nama Penerima</label>
+            <input type="text" id="nama" placeholder="Masukkan nama penerima">
+
+            <label for="pesan">Isi Pesan</label>
+            <textarea id="pesan" rows="4" placeholder="Tulis pesan ucapan"></textarea>
+
+            <label for="warna">Warna Kartu</label>
+            <select id="warna">
+                <option value="pink">Pink</option>
+                <option value="ungu">Ungu</option>
+                <option value="biru">Biru</option>
+                <option value="hijau">Hijau</option>
+            </select>
+
+            <button id="buat">Buat Kartu</button>
+            <p id="statusForm" aria-live="polite"></p>
+        </section>
+
+        <!-- HALAMAN KEDUA: HASIL KARTU -->
+        <section class="preview" id="halamanHasil" hidden>
+            <h2>Hasil Kartu Ucapan</h2>
+
+            <div id="kartu" class="pink">
+                <h2 id="judul">Selamat Ulang Tahun</h2>
+                <h3 id="namaHasil">Nama Penerima</h3>
+                <h4 id="pesanHasil">Pesan ucapan akan tampil di sini.</h4>
+            </div>
+
+            <p id="statusHasil" aria-live="polite"></p>
+            <button id="salin">Salin Pesan</button>
+            <button id="kembali" class="tombol-kembali">Kembali</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyek Mini KK3 - RPL</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
